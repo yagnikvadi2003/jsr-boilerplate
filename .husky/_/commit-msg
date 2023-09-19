@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Check if the commit message is empty
+if [ -z "$HUSKY_GIT_PARAMS" ]; then
+    echo "Error: Please use 'yarn commit' instead of 'git commit -m \"\"'."
+    exit 1
+fi
+
+# Check if the commit message starts with 'yarn commit'
+if ! grep -qE "^\s*yarn\s+commit\b" "$HUSKY_GIT_PARAMS"; then
+    echo "Error: Please use 'yarn commit' for commits."
+    exit 1
+fi
+
+# Continue with the commit
+exit 0

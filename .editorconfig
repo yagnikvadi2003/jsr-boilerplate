@@ -1,0 +1,24 @@
+# EditorConfig is a fantastic tool for maintaining consistent coding styles: https://EditorConfig.org
+
+# This is the top-most EditorConfig file
+root = true
+
+# Use Unix-style newlines (line endings) and ensure there's a newline at the end of every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default settings for all files
+charset = utf-8                   ; Use UTF-8 character encoding
+indent_size = 2                   ; Set indentation to 2 spaces
+indent_style = space              ; Use spaces for indentation
+trim_trailing_whitespace = true   ; Remove any trailing whitespace
+
+# Keep trailing whitespace in Markdown files
+[*.md]
+trim_trailing_whitespace = false  ; Disable removing trailing whitespace in Markdown files
+
+# Use tab indentation for Makefiles (no specific size specified)
+[Makefile]
+indent_style = tab                ; Use tabs for indentation in Makefiles
+
