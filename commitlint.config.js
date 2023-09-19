@@ -1,4 +1,4 @@
-import { RuleConfigSeverity } from "@commitlint/types";
+const { RuleConfigSeverity } = require("@commitlint/types");
 
 const Configuration = {
 	/*
@@ -47,18 +47,7 @@ const Configuration = {
 		"scope-enum": [
 			2,
 			"always",
-			[
-				"html",
-				"css",
-				"less",
-				"scss",
-				"markdown",
-				"javascriptreact",
-				"react",
-				"typescript",
-				"typescriptreact",
-				"json"
-			]
+			["html5", "css3", "less", "scss", "markdown", "javascript", "javascriptreact", "json"]
 		]
 	},
 	/*
@@ -123,11 +112,11 @@ const Configuration = {
 						title: "Documentation",
 						emoji: "📚"
 					},
-					feat: {
-						description: "A new feature",
-						title: "Features",
-						emoji: "✨"
-					},
+					description: "A new feature",
+					title: "Features",
+					emoji: "✨"
+				},
+				feat: {
 					fix: {
 						description: "A bug fix",
 						title: "Bug Fixes",
@@ -206,4 +195,4 @@ const Configuration = {
 	}
 };
 
-export default Configuration;
+module.exports = Configuration;
