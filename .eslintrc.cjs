@@ -11,12 +11,13 @@ module.exports = {
 		"prettier/babel"
 	],
 	ignorePatterns: ["dist", ".eslintrc.cjs"],
-	parser: "babel-eslint",
+	parser: "@babel/eslint-parser",
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
 		},
-		sourceType: "module"
+		sourceType: "module",
+		requireConfigFile: false
 	},
 	settings: { react: { version: "18.2" } },
 	plugins: ["react", "react-hooks", "prettier", "jsx-a11y", "babel", "react-refresh"],

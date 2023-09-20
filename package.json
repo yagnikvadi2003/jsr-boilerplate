@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yagnikvadi2003/your-repo/",
+    "url": "https://github.com/yagnikvadi2003/boilerplate/",
     "directory": "src"
   },
   "keywords": [
@@ -47,10 +47,10 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yagnikvadi2003/your-repo/issues"
+    "url": "https://github.com/yagnikvadi2003/boilerplate/issues"
   },
-  "discussion": "https://github.com/yagnikvadi2003/your-repo/discussions",
-  "homepage": "https://github.com/yagnikvadi2003/your-repo#readme",
+  "discussion": "https://github.com/yagnikvadi2003/boilerplate/discussions",
+  "homepage": "https://github.com/yagnikvadi2003/boilerplate#readme",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -69,6 +69,7 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@commitlint/prompt-cli": "^17.7.1",
+    "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
@@ -99,7 +100,7 @@
     "sass": "^1.67.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "^8.0.0",
     "terser-webpack-plugin": "^5.3.9",
     "vite": "^4.4.5",
     "webpack": "^5.88.2",

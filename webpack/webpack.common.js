@@ -87,20 +87,47 @@ module.exports = {
 					}
 				]
 			},
-			{
-				test: /\.svg$/,
-				loader: "svg-inline-loader"
-			},
+			// {
+			// 	test: /\.svg$/,
+			// 	use: [
+			// 		{
+			// 			loader: require.resolve("@svgr/webpack"),
+			// 			options: {
+			// 				prettier: false,
+			// 				svgo: false,
+			// 				svgoConfig: {
+			// 					plugins: [{ removeViewBox: false }]
+			// 				},
+			// 				titleProp: true,
+			// 				ref: true
+			// 			}
+			// 		},
+			// 		{
+			// 			loader: require.resolve("file-loader"),
+			// 			options: {
+			// 				name: "static/media/[name].[hash].[ext]"
+			// 			}
+			// 		}
+			// 	],
+			// 	issuer: {
+			// 		and: [/\.(js|jsx|md|mdx)$/]
+			// 	}
+			// },
+			// {
+			// 	test: /\.svg$/,
+			// 	use: {
+			// 		loader: "svg-url-loader"
+			// 	}
+			// },
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				//loader: "file-loader?name=/assets/images/[contenthash].[ext]",
 				loader: "file-loader",
 				options: {
 					name: devMode ? "[path][name].[ext]" : "[contenthash].[ext]"
 				}
 			},
 			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
 				use: [
 					{
 						loader: "file-loader",
