@@ -115,7 +115,7 @@
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": ">=18.17.0"
+    "node": ">=18.18.0"
   },
   "husky": {
     "hooks": {
