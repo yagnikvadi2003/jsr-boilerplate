@@ -2,7 +2,7 @@
   "name": "boilerplate",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "React JS boilerplate",
   "main": "main.tsx",
   "type": "commonjs",
   "scripts": {
