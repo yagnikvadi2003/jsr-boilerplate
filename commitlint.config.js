@@ -1,4 +1,4 @@
-const { RuleConfigSeverity } = require("@commitlint/types");
+import { RuleConfigSeverity } from "@commitlint/types";
 
 const Configuration = {
 	/*
@@ -235,4 +235,4 @@ const Configuration = {
 	}
 };
 
-module.exports = Configuration;
+export default Configuration;
