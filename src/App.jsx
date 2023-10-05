@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import reactLogo from "../public/assets/react.svg";
+// @ts-ignore
+import reactLogo from "@assets/svg/react.svg";
 import "./App.css";
 
-function App() {
+const App = () => {
 	const [count, setCount] = useState(0);
 
 	return (
-		<>
+		<React.Fragment>
 			<div>
 				<a href="https://react.dev" target="_blank">
 					<img src={reactLogo} className="logo react" alt="React logo" />
@@ -20,8 +21,8 @@ function App() {
 				</p>
 			</div>
 			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-		</>
+		</React.Fragment>
 	);
-}
+};
 
 export default App;

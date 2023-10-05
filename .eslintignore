@@ -1,16 +1,60 @@
 # dependencies
-node_modules/
-.yarn/
+/node_modules
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # production
 build/
 dist/
 public/
 
-# webpack
-webpack.config.js
-webpack.common.js
-webpack.prod.js
+# misc
+.DS_Store
+.env
+
+# ignore all logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDE files
+.idea
+
+# dependencies
+.eslintrc.cjs
 
 # ide
-.vscode/
+.vscode/*
+!.vscode/extensions.json
+
+# ignore lock files
+yarn.lock
+package-lock.json
+
+# webpack
+config/webpack.config.js
+config/webpack.common.js
+config/webpack.prod.js
+
+config/env.js
+config/modules.js
+config/paths.js
+
+# ignore config files
+vite.config.js
+react-app-env.d.js
+reportWebVitals.js
+jsconfig.json
+
+# This file naturally might break conventional rules
+vite-env.d.js
+commitlint.config.js

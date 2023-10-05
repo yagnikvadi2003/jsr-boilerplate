@@ -24,30 +24,70 @@ const Configuration = {
 			RuleConfigSeverity.Error,
 			"always",
 			[
+				// Changes related to the build process or build tools.
 				"build",
+
+				// Changes that introduce functional or behavioral modifications.
 				"change",
+
+				// Miscellaneous tasks or maintenance chores that don't affect functionality.
 				"chore",
+
+				// Changes to the continuous integration (CI) configuration or scripts.
 				"ci",
+
+				// Marks code or features as deprecated and provides alternatives.
 				"deprecate",
+
+				// Documentation-related changes, updates, or additions.
 				"docs",
+
+				// Introducing a new feature or enhancement to the codebase.
 				"feat",
+
+				// Fixes for bugs or errors in the code.
 				"fix",
+
+				// Changes aimed at improving performance or optimizing code.
 				"perf",
+
+				// Modifications that enhance the code structure without changing its behavior.
 				"refactor",
+
+				// Removal of code, files, or features from the codebase.
 				"remove",
+
+				// Reverts a previous commit or changeset.
 				"revert",
+
+				// Changes addressing security vulnerabilities or improvements.
 				"security",
+
+				// Adjustments to the code style, formatting, or visual elements.
 				"style",
+
+				// Additions or updates to tests, testing frameworks, or test-related code.
 				"test"
 			]
 		],
-		"body-case": [2, "always", "lower-case"],
+		"body-case": [2, "always", "sentence-case"],
 		"body-max-line-length": [1, "always", 72],
 		"header-max-length": [2, "always", 72],
 		"scope-enum": [
 			2,
 			"always",
-			["html5", "css3", "less", "scss", "markdown", "javascript", "javascriptreact", "json"]
+			[
+				"html",
+				"css",
+				"less",
+				"scss",
+				"markdown",
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"json"
+			]
 		]
 	},
 	/*
@@ -112,11 +152,11 @@ const Configuration = {
 						title: "Documentation",
 						emoji: "📚"
 					},
-					description: "A new feature",
-					title: "Features",
-					emoji: "✨"
-				},
-				feat: {
+					feat: {
+						description: "A new feature",
+						title: "Features",
+						emoji: "✨"
+					},
 					fix: {
 						description: "A bug fix",
 						title: "Bug Fixes",

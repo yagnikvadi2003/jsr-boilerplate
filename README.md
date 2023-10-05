@@ -1,8 +1,10 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1 align="center">React Web Application Boilerplate - Version 1.0.0</h1>
+<p align="center">
+  This boilerplate provides a solid foundation for a professional React application. It includes essential tools and configurations such as Webpack for bundling, Prettier for code formatting, ESLint for code linting, and Husky for enforcing Git hooks. Additionally, it offers different environment configurations for seamless development, staging, and production deployments.
+  <br>
+  <br>
+  🔹
+  <a href="https://github.com/yagnikvadi2003/jsr-boilerplate/issues">Report bug</a>
+  🔹
+  <a href="https://github.com/yagnikvadi2003/jsr-boilerplate/pulls">Pull requests</a>
+</p>

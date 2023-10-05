@@ -1,2 +1,44 @@
-.vscode-test/
-node_modules/
+# dependencies
+**/node_modules
+**/.eslintrc.cjs
+
+# production
+**/build
+**/dist
+**/public
+
+# styles files
+*.css
+styles/*.css
+styles/*.scss
+styles/*.sass
+styles/*.less
+
+# ignore all logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+
+# ide
+**/.vscode/*
+
+# Ignore lock files
+**/yarn.lock
+**/package-lock.json
+
+# ignore config files
+**/vite.config.js
+**/react-app-env.d.js
+**/reportWebVitals.js
+**/jsconfig.json
+**/jsconfig.paths.json
+**/vite-env.d.js
+
+# Others
+**/.gitignore
+**/index.html
+**/LICENSE
+**/package.json
+**/README.md
