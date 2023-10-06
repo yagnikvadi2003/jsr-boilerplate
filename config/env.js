@@ -20,7 +20,7 @@ const dotenvFiles = [
 	// results for everyone
 	NODE_ENV !== "test" && `${paths.dotenv}.local`,
 	`${paths.dotenv}.${NODE_ENV}`,
-	paths.dotenv,
+	paths.dotenv
 ].filter(Boolean);
 
 // Load environment variables from .env* files. Suppress warnings using silent
@@ -28,7 +28,7 @@ const dotenvFiles = [
 // that have already been set.  Variable expansion is supported in .env files.
 // https://github.com/motdotla/dotenv
 // https://github.com/motdotla/dotenv-expand
-dotenvFiles.forEach((dotenvFile) => {
+dotenvFiles.forEach(dotenvFile => {
 	if (fs.existsSync(dotenvFile)) {
 		const dotenv = require("dotenv");
 		const dotenvExpand = require("dotenv-expand");
@@ -55,8 +55,8 @@ dotenvFiles.forEach((dotenvFile) => {
 const appDirectory = fs.realpathSync(process.cwd());
 process.env.NODE_PATH = (process.env.NODE_PATH || "")
 	.split(path.delimiter)
-	.filter((folder) => folder && !path.isAbsolute(folder))
-	.map((folder) => path.resolve(appDirectory, folder))
+	.filter(folder => folder && !path.isAbsolute(folder))
+	.map(folder => path.resolve(appDirectory, folder))
 	.join(path.delimiter);
 
 // Grab NODE_ENV and REACT_APP_* environment variables and prepare them to be
@@ -65,7 +65,7 @@ const REACT_APP = /^REACT_APP_/i;
 
 function getClientEnvironment(publicUrl) {
 	const raw = Object.keys(process.env)
-		.filter((key) => REACT_APP.test(key))
+		.filter(key => REACT_APP.test(key))
 		.reduce(
 			(env, key) => {
 				env[key] = process.env[key];
@@ -90,15 +90,15 @@ function getClientEnvironment(publicUrl) {
 				WDS_SOCKET_PORT: process.env.WDS_SOCKET_PORT,
 				// Whether or not react-refresh is enabled.
 				// It is defined here so it is available in the webpackHotDevClient.
-				FAST_REFRESH: process.env.FAST_REFRESH !== "false",
-			},
+				FAST_REFRESH: process.env.FAST_REFRESH !== "false"
+			}
 		);
 	// Stringify all values so we can feed into webpack DefinePlugin
 	const stringified = {
 		"process.env": Object.keys(raw).reduce((env, key) => {
 			env[key] = JSON.stringify(raw[key]);
 			return env;
-		}, {}),
+		}, {})
 	};
 
 	return { raw, stringified };

@@ -23,8 +23,8 @@ const isEnvProduction = process.env.NODE_ENV === "production";
 
 const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || "10000");
 
-// Check if TypeScript is setup
-const useTypeScript = fs.existsSync(paths.appTsConfig);
+// Check if JavaScript is setup
+const useJavaScript = fs.existsSync(paths.appJsConfig);
 
 // // Check if Tailwind config exists
 // const useTailwind = fs.existsSync(path.join(paths.appPath, 'tailwind.config.js'));
@@ -281,7 +281,7 @@ module.exports = {
 		// for React Native Web.
 		extensions: paths.moduleFileExtensions
 			.map(ext => `.${ext}`)
-			.filter(ext => useTypeScript || !ext.includes("ts")),
+			.filter(ext => useJavaScript || !ext.includes("js")),
 		alias: {
 			"@app": path.resolve(__dirname, "../src"),
 			"@types": path.resolve(__dirname, "../src/types"),

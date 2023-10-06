@@ -1,6 +1,6 @@
-import { RuleConfigSeverity } from "@commitlint/types";
+const { RuleConfigSeverity } = require("@commitlint/types");
 
-const Configuration = {
+module.exports = {
 	/*
 	 * Resolve and load @commitlint/config-conventional from node_modules.
 	 * Referenced packages must be installed
@@ -235,4 +235,4 @@ const Configuration = {
 	}
 };
 
-export default Configuration;
+// export default Configuration;

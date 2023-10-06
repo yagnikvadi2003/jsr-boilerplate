@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-// @ts-ignore
+
 import reactLogo from "@assets/svg/react.svg";
+
 import "./App.css";
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
 	return (
 		<React.Fragment>
 			<div>
-				<a href="https://react.dev" target="_blank">
+				<a href="https://react.dev" target="_blank" rel="noreferrer">
 					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
 			</div>

@@ -4,7 +4,7 @@
   "description": "React JS boilerplate",
   "private": true,
   "main": "main.jsx",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start:web": "NODE_ENV=development webpack-dev-server --open --mode development --config ./config/webpack.config.js --hot",
     "staging:web": "NODE_ENV=staging webpack-dev-server --open --mode development --config ./config/webpack.config.js",
