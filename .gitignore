@@ -93,6 +93,9 @@ build/
 
 # The file containing environment variables 
 .env
+.env.development
+.env.production
+.env.staging
 
 # Ignore editor specific files
 # .vscode/
